@@ -1,0 +1,3 @@
+#Abre um server e disponibiliza o diretório na rede local
+
+python -m SimpleHTTPServer 8989
