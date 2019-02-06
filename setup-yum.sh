@@ -82,8 +82,7 @@ rm -rf get_helm.sh
 #Terraform
 
 wget https://releases.hashicorp.com/terraform/0.11.11/terraform_0.11.11_linux_amd64.zip
-unzip terraform_0.11.11_linux_amd64.zip /terraform
-cd terraform
+unzip terraform_0.11.11_linux_amd64.zip
 sudo mv terraform /usr/local/bin/
 
-sudo terraform --version 
+terraform --version 
