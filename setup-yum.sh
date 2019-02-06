@@ -65,7 +65,9 @@ export PATH=$JAVA_HOME/bin:$PATH
 ##Kubernetes
 #Kubectl
 
-sudo yum install -y kubectl 
+curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+chmod +x ./kubectl
+sudo mv ./kubectl /usr/sbin/
 
 #Helm 
 
@@ -83,6 +85,6 @@ rm -rf get_helm.sh
 
 wget https://releases.hashicorp.com/terraform/0.11.11/terraform_0.11.11_linux_amd64.zip
 unzip terraform_0.11.11_linux_amd64.zip
-sudo mv terraform /usr/local/bin/
+sudo mv ./terraform /usr/sbin/
 
 terraform --version 
